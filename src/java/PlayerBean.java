@@ -8,6 +8,7 @@ import javax.faces.bean.ManagedBean;
 
 @ManagedBean(name="player")
 public class PlayerBean {
+    // player attributes
     private String firstname;
     private String lastname;
     private String position;
@@ -19,6 +20,25 @@ public class PlayerBean {
     private String college;
     private String favoriteTeam;
     
+    // attributes skills
+    private int layups;
+    private int dunks;
+    private int midRange;
+    private int threePt;
+    private int ballHandling;
+    private int passing;
+    private int postOffense;
+    private int rebounding;
+    private int steals;
+    private int blocks;
+    private int vertical;
+    private int lateralQuickness;
+    private int speed;
+    private int acceleration;
+    private int strength;
+    private int stamina;   
+    
+    
     // Lists
     List<String> positionOptions;
     List<Integer> heightOptions;
@@ -27,7 +47,7 @@ public class PlayerBean {
     List<String> archetypeOptions;
     List<String> collegeOptions;
     List<String> teamOptions;
-
+    
     // Get
     public String getFirstname() {
         return firstname;
@@ -96,10 +116,70 @@ public class PlayerBean {
     public List<String> getTeamOptions() {
         return teamOptions;
     }
-    
-    
-    
 
+    public int getLayups() {
+        return layups;
+    }
+
+    public int getDunks() {
+        return dunks;
+    }
+
+    public int getMidRange() {
+        return midRange;
+    }
+
+    public int getThreePt() {
+        return threePt;
+    }
+
+    public int getBallHandling() {
+        return ballHandling;
+    }
+
+    public int getPassing() {
+        return passing;
+    }
+
+    public int getPostOffense() {
+        return postOffense;
+    }
+
+    public int getRebounding() {
+        return rebounding;
+    }
+
+    public int getSteals() {
+        return steals;
+    }
+
+    public int getBlocks() {
+        return blocks;
+    }
+
+    public int getVertical() {
+        return vertical;
+    }
+
+    public int getLateralQuickness() {
+        return lateralQuickness;
+    }
+    
+    public int getSpeed(){
+        return speed;
+    }
+
+    public int getAcceleration() {
+        return acceleration;
+    }
+
+    public int getStrength() {
+        return strength;
+    }
+
+    public int getStamina() {
+        return stamina;
+    }           
     
     // Set
     public void setFirstname(String firstname) {
@@ -128,6 +208,17 @@ public class PlayerBean {
 
     public void setArchetypeOne(String archetypeOne) {
         this.archetypeOne = archetypeOne;
+        if(archetypeOne.equals("Passing & Ball-Handling")){
+            setBallHandling(96);
+            setPassing(90);
+        }else if (archetypeOne.equals("Rebounding")){
+        }else if (archetypeOne.equals("Shot Creating")){
+        }else if (archetypeOne.equals("3PT Shooting")){
+        }else if (archetypeOne.equals("Driving & Finishing")){   
+        }else if (archetypeOne.equals("Post Scoring")){
+        }else if (archetypeOne.equals("Defending")){
+        }else if (archetypeOne.equals("Rebounding")){
+        }
     }
 
     public void setArchetypeTwo(String archetypeTwo) {
@@ -141,11 +232,71 @@ public class PlayerBean {
     public void setFavoriteTeam(String favoriteTeam) {
         this.favoriteTeam = favoriteTeam;
     }
+
+    public void setLayups(int layups) {
+        this.layups = layups;
+    }
+
+    public void setDunks(int dunks) {
+        this.dunks = dunks;
+    }
+
+    public void setMidRange(int midRange) {
+        this.midRange = midRange;
+    }
+
+    public void setThreePt(int threePt) {
+        this.threePt = threePt;
+    }
+
+    public void setBallHandling(int ballHandling) {
+        this.ballHandling = ballHandling;
+    }
+
+    public void setPassing(int passing) {
+        this.passing = passing;
+    }
+
+    public void setPostOffense(int postOffense) {
+        this.postOffense = postOffense;
+    }
+
+    public void setRebounding(int rebounding) {
+        this.rebounding = rebounding;
+    }
+
+    public void setSteals(int steals) {
+        this.steals = steals;
+    }
+
+    public void setBlocks(int blocks) {
+        this.blocks = blocks;
+    }
+
+    public void setVertical(int vertical) {
+        this.vertical = vertical;
+    }
+
+    public void setLateralQuickness(int lateralQuickness) {
+        this.lateralQuickness = lateralQuickness;
+    }
     
-    
-    
-    
-    
+    public void setSpeed(int speed){
+        this.speed = speed;        
+    }
+
+    public void setAcceleration(int acceleration) {
+        this.acceleration = acceleration;
+    }
+
+    public void setStrength(int strength) {
+        this.strength = strength;
+    }
+
+    public void setStamina(int stamina) {
+        this.stamina = stamina;
+    }
+      
     
     public PlayerBean(){
         positionOptions = new ArrayList<String>();

@@ -84,8 +84,29 @@ a:hover{
     color: white;
 }
 
+.white-box{
+    display: flex;
+    width: 950px;
+    background-color: white;
+}
+
 /* Fonts */
 .p-font{
     font-family: Arial;
     color: white;
+}
+
+.t-font{
+    font-family: Consolas;
+    color: activeborder;
+}
+
+/* Extras */
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
 }

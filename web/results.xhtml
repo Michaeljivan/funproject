@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+       xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Web Project</title>
+        <h:outputStylesheet library="css" name="mainStyle.css" />
+        <h:outputScript library="js" name="main.js" />
+    </h:head>
+    <h:body class="body">
+        <div class="nav-bar">
+            <nav>
+                <span><a href="index.xhtml"><img src="resources/img/nba-2k-logo.jpg" style="width: 100px;"/></a></span>
+                <a href="creation.xhtml" class="nav-link-active">Create a Player</a>
+                <a href="#" class="nav-link">NBA2K19</a>
+            </nav>
+        </div>
+        <br></br>
+        <div class="form-body">
+            <h:form class="form">
+                <p class="p-font">MyCareer</p>
+            </h:form>
+        </div>
+        <br></br>
+        <div class="form-body">
+            <h:form class="form"><br/>
+                <h:panelGrid columns="6">
+                    
+                    
+                    <h:outputLabel class="p-font" value="First Name"/>
+                    <h:outputText class="t-font" value="#{player.firstname}"/>
+                    
+                    <h:outputLabel class="p-font" value="Last Name"/>
+                    <h:outputText class="t-font" value="#{player.lastname}"/>
+                    
+                    <h:outputLabel class="p-font" value="Position"/>
+                    <h:outputText class="t-font" value="#{player.position}"/>
+                    
+                    <h:outputLabel class="p-font" value="Weight"/>
+                    <h:outputText class="t-font" value="#{player.weight}"/>
+                    
+                    <h:outputLabel class="p-font" value="Primary Archetype"/>
+                    <h:outputText class="t-font" value="#{player.archetypeOne}"/>
+                    
+                    <h:outputLabel class="p-font" value="Secondary Archetype"/>
+                    <h:outputText class="t-font" value="#{player.archetypeTwo}"/>
+                </h:panelGrid>
+            </h:form><br/><br/>
+        </div><br></br>
+        <div class="form-body">
+            <h:form class="form">                
+                <p class="p-font">Attributes</p>
+                <div class="white-box">
+                    <h:panelGrid columns="2">
+                        
+                        <h:outputLabel class="left" for="layups" value="Layups: "/>
+                        <h:outputText id="layups" value="#{player.layups}"/>
+                    
+                        <h:outputLabel class="left" for="dunks" value="Dunks: "/>
+                        <h:outputText id="dunks" value="#{player.dunks}"/>
+
+                        <h:outputLabel class="left" for="mid" value="Mid-Range: "/>
+                        <h:outputText id="mid" value="#{player.midRange}"/>
+
+                        <h:outputLabel class="left" for="three" value="3PT: "/>
+                        <h:outputText id="three" value="#{player.threePt}"/>
+
+                        <h:outputLabel class="left" for="ballh" value="Ball Handling: "/>
+                        <h:outputText id="ballh" value="#{player.ballHandling}"/>
+
+                        <h:outputLabel class="left" for="passing" value="Passing: "/>
+                        <h:outputText id="passing" value="#{player.passing}"/>
+
+                        <h:outputLabel class="left" for="post" value="Post Offense: "/>
+                        <h:outputText id="post" value="#{player.postOffense}"/>
+
+                        <h:outputLabel class="left" for="rebound" value="Rebounding: "/>
+                        <h:outputText id="rebound" value="#{player.rebounding}"/>
+
+                        <h:outputLabel class="left" for="steal" value="Steals: "/>
+                        <h:outputText id="steal" value="#{player.steals}"/>
+
+                        <h:outputLabel class="left" for="blocks" value="Blocks: "/>
+                        <h:outputText id="blocks" value="#{player.blocks}"/>
+
+                        <h:outputLabel class="left" for="vert" value="Vertical: "/>
+                        <h:outputText id="vert" value="#{player.vertical}"/>
+
+                        <h:outputLabel class="left" for="lat" value="Lateral Quickness: "/>
+                        <h:outputText id="lat" value="#{player.lateralQuickness}"/>
+
+                        <h:outputLabel class="left" for="spd" value="Speed: "/>
+                        <h:outputText id="spd" value="#{player.speed}"/>
+
+                        <h:outputLabel class="left" for="acc" value="Acceleration: "/>
+                        <h:outputText id="acc" value="#{player.acceleration}"/>
+
+                        <h:outputLabel class="left" for="str" value="Strength: "/>
+                        <h:outputText id="str" value="#{player.strength}"/>
+
+                        <h:outputLabel class="left" for="stamina" value="Stamina: "/>
+                        <h:outputText id="stamina" value="#{player.stamina}"/>
+                    </h:panelGrid>
+                </div>
+                
+            </h:form><br/><br/>
+        </div>
+        
+    </h:body>  
+</html>
+
+       
