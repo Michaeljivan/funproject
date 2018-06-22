@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
+import java.util.Random;
 
 /* @author jivanm
  * PlayerBean
@@ -8,7 +9,10 @@ import javax.faces.bean.ManagedBean;
 
 @ManagedBean(name="player")
 public class PlayerBean {
-    // player attributes
+    
+    Random rand = new Random();
+    
+    // Player attributes
     private String firstname;
     private String lastname;
     private String position;
@@ -20,7 +24,7 @@ public class PlayerBean {
     private String college;
     private String favoriteTeam;
     
-    // attributes skills
+    // Attributes skills
     private int layups;
     private int dunks;
     private int midRange;
@@ -36,8 +40,42 @@ public class PlayerBean {
     private int speed;
     private int acceleration;
     private int strength;
-    private int stamina;   
+    private int stamina;
     
+    // Primary Badges
+    private String primaryBadge1;
+    private String primaryBadge2;
+    private String primaryBadge3;
+    private String primaryBadge4;
+    private String primaryBadge5;
+    
+    // Secondary Badges
+    private String secondaryBadge1;
+    private String secondaryBadge2;
+    private String secondaryBadge3;
+    private String secondaryBadge4;
+    private String secondaryBadge5;
+    private String secondaryBadge6;
+    private String secondaryBadge7;
+    private String secondaryBadge8;
+    private String secondaryBadge9;
+    
+    // Badge names
+    private String primaryBadgeName1;
+    private String primaryBadgeName2;
+    private String primaryBadgeName3;
+    private String primaryBadgeName4;
+    private String primaryBadgeName5;
+    
+    private String secondaryBadgeName1;
+    private String secondaryBadgeName2;
+    private String secondaryBadgeName3;
+    private String secondaryBadgeName4;
+    private String secondaryBadgeName5;
+    private String secondaryBadgeName6;
+    private String secondaryBadgeName7;
+    private String secondaryBadgeName8;
+    private String secondaryBadgeName9;    
     
     // Lists
     List<String> positionOptions;
@@ -48,7 +86,7 @@ public class PlayerBean {
     List<String> collegeOptions;
     List<String> teamOptions;
     
-    // Get
+    // Getters
     public String getFirstname() {
         return firstname;
     }
@@ -180,14 +218,128 @@ public class PlayerBean {
     public int getStamina() {
         return stamina;
     }           
+
+    public String getPrimaryBadge1() {
+        return primaryBadge1;
+    }
+
+    public String getPrimaryBadge2() {
+        return primaryBadge2;
+    }
+
+    public String getPrimaryBadge3() {
+        return primaryBadge3;
+    }
+
+    public String getPrimaryBadge4() {
+        return primaryBadge4;
+    }
+
+    public String getPrimaryBadge5() {
+        return primaryBadge5;
+    }
+
+    public String getSecondaryBadge1() {
+        return secondaryBadge1;
+    }
+
+    public String getSecondaryBadge2() {
+        return secondaryBadge2;
+    }
+
+    public String getSecondaryBadge3() {
+        return secondaryBadge3;
+    }
+
+    public String getSecondaryBadge4() {
+        return secondaryBadge4;
+    }
+
+    public String getSecondaryBadge5() {
+        return secondaryBadge5;
+    }
+
+    public String getSecondaryBadge6() {
+        return secondaryBadge6;
+    }
+
+    public String getSecondaryBadge7() {
+        return secondaryBadge7;
+    }
+
+    public String getSecondaryBadge8() {
+        return secondaryBadge8;
+    }
+
+    public String getSecondaryBadge9() {
+        return secondaryBadge9;
+    }
+
+    public String getPrimaryBadgeName1() {
+        return primaryBadgeName1;
+    }
+
+    public String getPrimaryBadgeName2() {
+        return primaryBadgeName2;
+    }
+
+    public String getPrimaryBadgeName3() {
+        return primaryBadgeName3;
+    }
+
+    public String getPrimaryBadgeName4() {
+        return primaryBadgeName4;
+    }
+
+    public String getPrimaryBadgeName5() {
+        return primaryBadgeName5;
+    }
+
+    public String getSecondaryBadgeName1() {
+        return secondaryBadgeName1;
+    }
+
+    public String getSecondaryBadgeName2() {
+        return secondaryBadgeName2;
+    }
+
+    public String getSecondaryBadgeName3() {
+        return secondaryBadgeName3;
+    }
+
+    public String getSecondaryBadgeName4() {
+        return secondaryBadgeName4;
+    }
+
+    public String getSecondaryBadgeName5() {
+        return secondaryBadgeName5;
+    }
+
+    public String getSecondaryBadgeName6() {
+        return secondaryBadgeName6;
+    }
+
+    public String getSecondaryBadgeName7() {
+        return secondaryBadgeName7;
+    }
+
+    public String getSecondaryBadgeName8() {
+        return secondaryBadgeName8;
+    }
+
+    public String getSecondaryBadgeName9() {
+        return secondaryBadgeName9;
+    }
     
-    // Set
+    
+    
+    // Setters
     public void setFirstname(String firstname) {
-        this.firstname = firstname;
+        this.firstname = firstname.toUpperCase();
     }
 
     public void setLastname(String lastname) {
-        this.lastname = lastname;
+        this.lastname = lastname.toUpperCase();
     }
 
     public void setPosition(String position) {
@@ -205,24 +357,265 @@ public class PlayerBean {
     public void setShoulderWidth(double shoulderWidth) {
         this.shoulderWidth = shoulderWidth;
     }
-
+    
+    // Set Archetype One Badges and Skills
     public void setArchetypeOne(String archetypeOne) {
         this.archetypeOne = archetypeOne;
         if(archetypeOne.equals("Passing & Ball-Handling")){
             setBallHandling(96);
             setPassing(90);
-        }else if (archetypeOne.equals("Rebounding")){
-        }else if (archetypeOne.equals("Shot Creating")){
-        }else if (archetypeOne.equals("3PT Shooting")){
-        }else if (archetypeOne.equals("Driving & Finishing")){   
-        }else if (archetypeOne.equals("Post Scoring")){
-        }else if (archetypeOne.equals("Defending")){
-        }else if (archetypeOne.equals("Rebounding")){
+            setMidRange(85);
+            setLayups(80);
+            setDunks(71);
+            setThreePt(77);
+            setBlocks(25);
+            setSteals(50);
+            setPrimaryBadge1("resources/img/playmaker_elite.png");
+            setPrimaryBadgeName1("Ankle Breaker");
+            setPrimaryBadge2("resources/img/playmaker_elite.png");
+            setPrimaryBadgeName2("Dimer");
+            setPrimaryBadge3("resources/img/playmaker_elite.png");
+            setPrimaryBadgeName3("Pick and Roll Maestro");
+            setPrimaryBadge4("resources/img/outsideshooter_gold.png");
+            setPrimaryBadgeName4("Catch and Shoot");
+            setPrimaryBadge5("resources/img/playmaker_elite.png");
+            setPrimaryBadgeName5("Ankle Breaker");
+        }
+        else if (archetypeOne.equals("Rebounding")){
+            setRebounding(99);
+            setBlocks(89);
+            setStrength(99);
+            setPrimaryBadge1("resources/img/rebound_elite.png");
+            setPrimaryBadgeName1("Hustle Rebounder");
+            setPrimaryBadge2("resources/img/insideshooter_gold.png");
+            setPrimaryBadgeName2("Relentless Finisher");
+            setPrimaryBadge3("resources/img/athlete_elite.png");
+            setPrimaryBadgeName3("Brick Wall");
+            setPrimaryBadge4("resources/img/outsideshooter_gold.png");
+            setPrimaryBadgeName4("Catch and Shoot");
+            setPrimaryBadge5("resources/img/playmaker_elite.png");
+            setPrimaryBadgeName5("Ankle Breaker");
+        }
+        else if (archetypeOne.equals("Shot Creating")){
+            setMidRange(96);
+            setPrimaryBadge1("resources/img/playmaker_elite.png");
+            setPrimaryBadgeName1("Ankle Breaker");
+            setPrimaryBadge2("resources/img/playmaker_elite.png");
+            setPrimaryBadgeName2("Dimer");
+            setPrimaryBadge3("resources/img/playmaker_elite.png");
+            setPrimaryBadgeName3("Pick and Roll Maestro");
+            setPrimaryBadge4("resources/img/outsideshooter_gold.png");
+            setPrimaryBadgeName4("Catch and Shoot");
+            setPrimaryBadge5("resources/img/playmaker_elite.png");
+            setPrimaryBadgeName5("Ankle Breaker");
+        }
+        else if (archetypeOne.equals("3PT Shooting")){
+            setPrimaryBadge1("resources/img/playmaker_elite.png");
+            setPrimaryBadgeName1("Ankle Breaker");
+            setPrimaryBadge2("resources/img/playmaker_elite.png");
+            setPrimaryBadgeName2("Dimer");
+            setPrimaryBadge3("resources/img/playmaker_elite.png");
+            setPrimaryBadgeName3("Pick and Roll Maestro");
+            setPrimaryBadge4("resources/img/outsideshooter_gold.png");
+            setPrimaryBadgeName4("Catch and Shoot");
+            setPrimaryBadge5("resources/img/playmaker_elite.png");
+            setPrimaryBadgeName5("Ankle Breaker");
+        }
+        else if (archetypeOne.equals("Driving & Finishing")){   
+            setDunks(99);
+            setPrimaryBadge1("resources/img/playmaker_elite.png");
+            setPrimaryBadgeName1("Ankle Breaker");
+            setPrimaryBadge2("resources/img/playmaker_elite.png");
+            setPrimaryBadgeName2("Dimer");
+            setPrimaryBadge3("resources/img/playmaker_elite.png");
+            setPrimaryBadgeName3("Pick and Roll Maestro");
+            setPrimaryBadge4("resources/img/outsideshooter_gold.png");
+            setPrimaryBadgeName4("Catch and Shoot");
+            setPrimaryBadge5("resources/img/playmaker_elite.png");
+            setPrimaryBadgeName5("Ankle Breaker");            
+        }
+        else if (archetypeOne.equals("Post Scoring")){
+            setPrimaryBadge1("resources/img/playmaker_elite.png");
+            setPrimaryBadgeName1("Ankle Breaker");
+            setPrimaryBadge2("resources/img/playmaker_elite.png");
+            setPrimaryBadgeName2("Dimer");
+            setPrimaryBadge3("resources/img/playmaker_elite.png");
+            setPrimaryBadgeName3("Pick and Roll Maestro");
+            setPrimaryBadge4("resources/img/outsideshooter_gold.png");
+            setPrimaryBadgeName4("Catch and Shoot");
+            setPrimaryBadge5("resources/img/playmaker_elite.png");
+            setPrimaryBadgeName5("Ankle Breaker");
+        }
+        else if (archetypeOne.equals("Defending")){
+            setPrimaryBadge1("resources/img/defender_elite.png");
+            setPrimaryBadgeName1("Defensive Stopper");
+            setPrimaryBadge2("resources/img/playmaker_elite.png");
+            setPrimaryBadgeName2("Pick Pocket");
+            setPrimaryBadge3("resources/img/playmaker_elite.png");
+            setPrimaryBadgeName3("Rim Protector");
+            setPrimaryBadge4("resources/img/outsideshooter_gold.png");
+            setPrimaryBadgeName4("Corner Specialist");
+            setPrimaryBadge5("resources/img/playmaker_elite.png");
+            setPrimaryBadgeName5("Chase Down Artist");
         }
     }
 
+    
+    // Set Archetype Two Badges and Skills
     public void setArchetypeTwo(String archetypeTwo) {
         this.archetypeTwo = archetypeTwo;
+        if(archetypeTwo.equals("Passing & Ball-Handling")){
+            setBallHandling(96);
+            
+            setSecondaryBadge1("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName1("Ankle Breaker");
+            setSecondaryBadge2("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName2("Glue Hands");
+            setSecondaryBadge3("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName3("Glue Hands");
+            setSecondaryBadge4("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName4("Glue Hands");
+            setSecondaryBadge5("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName5("Glue Hands");
+            setSecondaryBadge6("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName6("Glue Hands");
+            setSecondaryBadge7("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName7("Glue Hands");
+            setSecondaryBadge8("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName8("Glue Hands");
+            setSecondaryBadge9("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName9("Glue Hands");
+        }
+        else if (archetypeTwo.equals("Rebounding")){
+            setRebounding(99);
+            setBlocks(89);
+            setStrength(99);
+            
+            setSecondaryBadge1("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName1("Break Starter");
+            setSecondaryBadge2("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName2("Glue Hands");
+            setSecondaryBadge3("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName3("Glue Hands");
+            setSecondaryBadge4("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName4("Glue Hands");
+            setSecondaryBadge5("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName5("Glue Hands");
+            setSecondaryBadge6("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName6("Glue Hands");
+            setSecondaryBadge7("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName7("Glue Hands");
+            setSecondaryBadge8("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName8("Glue Hands");
+            setSecondaryBadge9("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName9("Glue Hands");
+        }
+        else if (archetypeTwo.equals("Shot Creating")){
+            setMidRange(96);
+            
+            setSecondaryBadge1("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName1("Ankle Breaker");
+            setSecondaryBadge2("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName2("Glue Hands");
+            setSecondaryBadge3("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName3("Glue Hands");
+            setSecondaryBadge4("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName4("Glue Hands");
+            setSecondaryBadge5("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName5("Glue Hands");
+            setSecondaryBadge6("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName6("Glue Hands");
+            setSecondaryBadge7("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName7("Glue Hands");
+            setSecondaryBadge8("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName8("Glue Hands");
+            setSecondaryBadge9("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName9("Tireless Scorer");
+        }
+        else if (archetypeTwo.equals("3PT Shooting")){
+            setSecondaryBadge1("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName1("Ankle Breaker");
+            setSecondaryBadge2("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName2("Glue Hands");
+            setSecondaryBadge3("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName3("Glue Hands");
+            setSecondaryBadge4("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName4("Glue Hands");
+            setSecondaryBadge5("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName5("Glue Hands");
+            setSecondaryBadge6("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName6("Glue Hands");
+            setSecondaryBadge7("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName7("Glue Hands");
+            setSecondaryBadge8("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName8("Glue Hands");
+            setSecondaryBadge9("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName9("Glue Hands");   
+        }
+        else if (archetypeTwo.equals("Driving & Finishing")){   
+            setDunks(99);
+            setPostOffense(65);
+            
+            setSecondaryBadge1("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName1("Ankle Breaker");
+            setSecondaryBadge2("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName2("Glue Hands");
+            setSecondaryBadge3("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName3("Glue Hands");
+            setSecondaryBadge4("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName4("Glue Hands");
+            setSecondaryBadge5("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName5("Glue Hands");
+            setSecondaryBadge6("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName6("Glue Hands");
+            setSecondaryBadge7("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName7("Glue Hands");
+            setSecondaryBadge8("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName8("Glue Hands");
+            setSecondaryBadge9("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName9("Glue Hands");
+            
+        }
+        else if (archetypeTwo.equals("Post Scoring")){
+            setSecondaryBadge1("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName1("Ankle Breaker");
+            setSecondaryBadge2("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName2("Glue Hands");
+            setSecondaryBadge3("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName3("Glue Hands");
+            setSecondaryBadge4("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName4("Glue Hands");
+            setSecondaryBadge5("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName5("Glue Hands");
+            setSecondaryBadge6("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName6("Glue Hands");
+            setSecondaryBadge7("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName7("Glue Hands");
+            setSecondaryBadge8("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName8("Glue Hands");
+            setSecondaryBadge9("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName9("Glue Hands");
+        }
+        else if (archetypeTwo.equals("Defending")){
+            setSecondaryBadge1("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName1("Ankle Breaker");
+            setSecondaryBadge2("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName2("Glue Hands");
+            setSecondaryBadge3("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName3("Glue Hands");
+            setSecondaryBadge4("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName4("Glue Hands");
+            setSecondaryBadge5("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName5("Glue Hands");
+            setSecondaryBadge6("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName6("Glue Hands");
+            setSecondaryBadge7("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName7("Glue Hands");
+            setSecondaryBadge8("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName8("Glue Hands");
+            setSecondaryBadge9("resources/img/playmaker_bronze.png");
+            setSecondaryBadgeName9("Glue Hands");
+        }
     }
 
     public void setCollege(String college) {
@@ -296,7 +689,118 @@ public class PlayerBean {
     public void setStamina(int stamina) {
         this.stamina = stamina;
     }
-      
+
+    public void setPrimaryBadge1(String primaryBadge1) {
+        this.primaryBadge1 = primaryBadge1;
+    }
+
+    public void setPrimaryBadge2(String primaryBadge2) {
+        this.primaryBadge2 = primaryBadge2;
+    }
+
+    public void setPrimaryBadge3(String primaryBadge3) {
+        this.primaryBadge3 = primaryBadge3;
+    }
+
+    public void setPrimaryBadge4(String primaryBadge4) {
+        this.primaryBadge4 = primaryBadge4;
+    }
+
+    public void setPrimaryBadge5(String primaryBadge5) {
+        this.primaryBadge5 = primaryBadge5;
+    }
+
+    public void setSecondaryBadge1(String secondaryBadge1) {
+        this.secondaryBadge1 = secondaryBadge1;
+    }
+
+    public void setSecondaryBadge2(String secondaryBadge2) {
+        this.secondaryBadge2 = secondaryBadge2;
+    }
+
+    public void setSecondaryBadge3(String secondaryBadge3) {
+        this.secondaryBadge3 = secondaryBadge3;
+    }
+
+    public void setSecondaryBadge4(String secondaryBadge4) {
+        this.secondaryBadge4 = secondaryBadge4;
+    }
+
+    public void setSecondaryBadge5(String secondaryBadge5) {
+        this.secondaryBadge5 = secondaryBadge5;
+    }
+
+    public void setSecondaryBadge6(String secondaryBadge6) {
+        this.secondaryBadge6 = secondaryBadge6;
+    }
+
+    public void setSecondaryBadge7(String secondaryBadge7) {
+        this.secondaryBadge7 = secondaryBadge7;
+    }
+
+    public void setSecondaryBadge8(String secondaryBadge8) {
+        this.secondaryBadge8 = secondaryBadge8;
+    }
+
+    public void setSecondaryBadge9(String secondaryBadge9) {
+        this.secondaryBadge9 = secondaryBadge9;
+    }
+
+    public void setPrimaryBadgeName1(String primaryBadgeName1) {
+        this.primaryBadgeName1 = primaryBadgeName1;
+    }
+
+    public void setPrimaryBadgeName2(String primaryBadgeName2) {
+        this.primaryBadgeName2 = primaryBadgeName2;
+    }
+
+    public void setPrimaryBadgeName3(String primaryBadgeName3) {
+        this.primaryBadgeName3 = primaryBadgeName3;
+    }
+
+    public void setPrimaryBadgeName4(String primaryBadgeName4) {
+        this.primaryBadgeName4 = primaryBadgeName4;
+    }
+
+    public void setPrimaryBadgeName5(String primaryBadgeName5) {
+        this.primaryBadgeName5 = primaryBadgeName5;
+    }
+
+    public void setSecondaryBadgeName1(String secondaryBadgeName1) {
+        this.secondaryBadgeName1 = secondaryBadgeName1;
+    }
+
+    public void setSecondaryBadgeName2(String secondaryBadgeName2) {
+        this.secondaryBadgeName2 = secondaryBadgeName2;
+    }
+
+    public void setSecondaryBadgeName3(String secondaryBadgeName3) {
+        this.secondaryBadgeName3 = secondaryBadgeName3;
+    }
+
+    public void setSecondaryBadgeName4(String secondaryBadgeName4) {
+        this.secondaryBadgeName4 = secondaryBadgeName4;
+    }
+
+    public void setSecondaryBadgeName5(String secondaryBadgeName5) {
+        this.secondaryBadgeName5 = secondaryBadgeName5;
+    }
+
+    public void setSecondaryBadgeName6(String secondaryBadgeName6) {
+        this.secondaryBadgeName6 = secondaryBadgeName6;
+    }
+
+    public void setSecondaryBadgeName7(String secondaryBadgeName7) {
+        this.secondaryBadgeName7 = secondaryBadgeName7;
+    }
+
+    public void setSecondaryBadgeName8(String secondaryBadgeName8) {
+        this.secondaryBadgeName8 = secondaryBadgeName8;
+    }
+
+    public void setSecondaryBadgeName9(String secondaryBadgeName9) {
+        this.secondaryBadgeName9 = secondaryBadgeName9;
+    }
     
     public PlayerBean(){
         positionOptions = new ArrayList<String>();
@@ -410,8 +914,4 @@ public class PlayerBean {
             teamOptions.add("Utah Jazz");
             teamOptions.add("Washington Wizards");
     }
-    
-    
-    
-    
 }

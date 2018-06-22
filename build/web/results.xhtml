@@ -31,7 +31,7 @@ and open the template in the editor.
         <br></br>
         <div class="form-body">
             <h:form class="form"><br/>
-                <h:panelGrid columns="6">
+                <h:panelGrid columns="8">
                     
                     
                     <h:outputLabel class="p-font" value="First Name"/>
@@ -46,10 +46,13 @@ and open the template in the editor.
                     <h:outputLabel class="p-font" value="Weight"/>
                     <h:outputText class="t-font" value="#{player.weight}"/>
                     
-                    <h:outputLabel class="p-font" value="Primary Archetype"/>
+                    <h:outputLabel class="p-font" value="Height"/>
+                    <h:outputText class="t-font" value="#{player.height}"/>
+                    
+                    <h:outputLabel class="p-font" value="Primary "/>
                     <h:outputText class="t-font" value="#{player.archetypeOne}"/>
                     
-                    <h:outputLabel class="p-font" value="Secondary Archetype"/>
+                    <h:outputLabel class="p-font" value="Secondary "/>
                     <h:outputText class="t-font" value="#{player.archetypeTwo}"/>
                 </h:panelGrid>
             </h:form><br/><br/>
@@ -59,7 +62,6 @@ and open the template in the editor.
                 <p class="p-font">Attributes</p>
                 <div class="white-box">
                     <h:panelGrid columns="2">
-                        
                         <h:outputLabel class="left" for="layups" value="Layups: "/>
                         <h:outputText id="layups" value="#{player.layups}"/>
                     
@@ -111,9 +113,71 @@ and open the template in the editor.
                 </div>
                 
             </h:form><br/><br/>
+            
+            
+            <h:outputLabel class="p-font left" value="Primary Badges"/>
+            <h:panelGrid columns="5">
+                <h:panelGrid>
+                    <img src="#{player.primaryBadge1}" class="badge-icon"/>
+                    <h:outputText class="p-font" value="#{player.primaryBadgeName1}"/>
+                </h:panelGrid>
+                <h:panelGrid>
+                    <img src="#{player.primaryBadge2}" class="badge-icon"/>
+                    <h:outputText class="p-font" value="#{player.primaryBadgeName2}"/>
+                </h:panelGrid>
+                <h:panelGrid>
+                    <img src="#{player.primaryBadge3}" class="badge-icon"/>
+                    <h:outputText class="p-font" value="#{player.primaryBadgeName3}"/>
+                </h:panelGrid>
+                <h:panelGrid>
+                    <img src="#{player.primaryBadge4}" class="badge-icon"/>
+                    <h:outputText class="p-font" value="#{player.primaryBadgeName4}"/>
+                </h:panelGrid>
+                <h:panelGrid>
+                    <img src="#{player.primaryBadge5}" class="badge-icon"/>
+                    <h:outputText class="p-font" value="#{player.primaryBadgeName5}"/>
+                </h:panelGrid>
+            </h:panelGrid>
+            <h:outputLabel class="p-font left" value="Secondary Badges"/>
+            <h:panelGrid columns="9">
+                <h:panelGrid>
+                    <img src="#{player.secondaryBadge1}" class="badge-icon"/>
+                    <h:outputText class="p-font" value="#{player.secondaryBadgeName1}"/>
+                </h:panelGrid>
+                <h:panelGrid>
+                    <img src="#{player.secondaryBadge2}" class="badge-icon"/>
+                    <h:outputText class="p-font" value="#{player.secondaryBadgeName2}"/>
+                </h:panelGrid>
+                <h:panelGrid>
+                    <img src="#{player.secondaryBadge3}" class="badge-icon"/>
+                    <h:outputText class="p-font" value="#{player.secondaryBadgeName3}"/>
+                </h:panelGrid>
+                <h:panelGrid>
+                    <img src="#{player.secondaryBadge4}" class="badge-icon"/>
+                    <h:outputText class="p-font" value="#{player.secondaryBadgeName4}"/>
+                </h:panelGrid>
+                <h:panelGrid>
+                    <img src="#{player.secondaryBadge5}" class="badge-icon"/>
+                    <h:outputText class="p-font" value="#{player.secondaryBadgeName5}"/>
+                </h:panelGrid>
+                <h:panelGrid>
+                    <img src="#{player.secondaryBadge6}" class="badge-icon"/>
+                    <h:outputText class="p-font" value="#{player.secondaryBadgeName6}"/>
+                </h:panelGrid>
+                <h:panelGrid>
+                    <img src="#{player.secondaryBadge7}" class="badge-icon"/>
+                    <h:outputText class="p-font" value="#{player.secondaryBadgeName7}"/>
+                </h:panelGrid>
+                <h:panelGrid>
+                    <img src="#{player.secondaryBadge8}" class="badge-icon"/>
+                    <h:outputText class="p-font" value="#{player.secondaryBadgeName8}"/>
+                </h:panelGrid>
+                <h:panelGrid>
+                    <img src="#{player.secondaryBadge9}" class="badge-icon"/>
+                    <h:outputText class="p-font" value="#{player.secondaryBadgeName9}"/>
+                </h:panelGrid>
+            </h:panelGrid>
         </div>
         
     </h:body>  
 </html>
-
-       

@@ -86,7 +86,7 @@ a:hover{
 
 .white-box{
     display: flex;
-    width: 950px;
+    width: 150px;
     background-color: white;
 }
 
@@ -98,7 +98,7 @@ a:hover{
 
 .t-font{
     font-family: Consolas;
-    color: activeborder;
+    color: gold;
 }
 
 /* Extras */
@@ -109,4 +109,10 @@ a:hover{
 
 .right{
     float: right;
+}
+
+/* Images */
+
+.badge-icon{
+    width: 55px;
 }
